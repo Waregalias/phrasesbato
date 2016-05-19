@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>PhrasesBato</title>
-        <link href="../resources/assets/css/app.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="../public/css/app.css" media="screen, projection" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     </head>
@@ -35,7 +35,7 @@
                     <h5 class="header col s12">Vous recherchez un consultant, je ne le suis pas mais j'aimerais le devenir.</h5>
                 </div>
             </div>
-            <div class="parallax"><img src="../resources/assets/img/wallHome.jpg" alt="Phrasesbato background home"></div>
+            <div class="parallax"><img src="../public/img/wallHome.jpg" alt="Phrasesbato background home"></div>
         </div>
 
         <div class="container">
@@ -75,7 +75,7 @@
                     <h5 class="header col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit am eleifend.</h5>
                 </div>
             </div>
-            <div class="parallax"><img src="../resources/assets/img/wallHomeR.jpg" alt="Phrasesbato background home"></div>
+            <div class="parallax"><img src="../public/img/wallHomeR.jpg" alt="Phrasesbato background home"></div>
         </div>
 
         <footer class="page-footer">
@@ -103,7 +103,7 @@
             </div>
         </footer>
     </body>
-    <script src="../resources/assets/js/jquery-2.2.3.min.js"></script>
-    <script src="../resources/assets/js/materialize.min.js"></script>
-    <script src="../resources/assets/js/init.js"></script>
+    <script src="../public/js/jquery-2.2.3.min.js"></script>
+    <script src="../public/js/materialize.min.js"></script>
+    <script src="../public/js/init.js"></script>
 </html>
