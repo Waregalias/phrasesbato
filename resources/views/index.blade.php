@@ -48,8 +48,12 @@
                             <label for="titleBato">Titre</label>
                         </div>
                         <div class="input-field col s12 m6">
-                            <input id="tagBato" name="tagBato" type="text" class="validate">
-                            <label for="tagBato">Tag</label>
+                            <select name="tag">
+                                <option value="1">#Rapport de stage</option>
+                                <option value="2">#Rencontre</option>
+                                <option value="3">#Work</option>
+                            </select>
+                            <label>tag</label>
                         </div>
                         <div class="input-field col s12">
                             <input id="phraseBato" name="phraseBato" type="text" class="validate">
@@ -111,16 +115,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                    <h5 class="white-text">phrasesbato.fr</h5>
-                    <p class="grey-text text-lighten-4">Trouvez des phrases bateau pour vos dossiers, entretien ou rencontre !</p>
+                        <h5 class="white-text">phrasesbato.fr</h5>
+                        <p class="grey-text text-lighten-4">Trouvez des phrases bateau pour vos dossiers, entretien ou rencontre !</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Plan</h5>
-                    <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Add</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Search</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Connexion</a></li>
-                    </ul>
+                        <h5 class="white-text">Plan</h5>
+                        <ul>
+                            <li><a class="addBtn grey-text text-lighten-3" href="#!">Add</a></li>
+                            <li><a class="searchBtn grey-text text-lighten-3" href="#!">Search</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Connexion</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
