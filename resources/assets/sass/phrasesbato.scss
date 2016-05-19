@@ -1,0 +1,42 @@
+html{
+    body{
+        nav{
+            background-color: #117D8B!important;
+        }
+        .parallax-container {
+            height: 215px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .container{
+            .row{
+                form{
+                    .center{
+                        margin-bottom: 50px;
+                        .btn{
+                            background-color: #0D0F0E !important;
+
+                            &:hover{
+                                background-color: #117D8B!important;
+                            }
+                        }
+                    }
+                }
+                .col{
+                    .card{
+                        background-color: #f4f4f4 !important;
+                        border-radius: 0px;
+                        box-shadow: none;
+                        .card-content{
+                            color: black!important;
+                            border-radius: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            background-color: #117D8B!important;
+        }
+    }
+}
