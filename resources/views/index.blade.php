@@ -12,13 +12,13 @@
                 <a href="#" class="brand-logo">PhrasesBato.fr</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#!">Add</a></li>
-                    <li><a href="#!">Search</a></li>
+                    <li><a class="addBtn" href="#!">Add</a></li>
+                    <li><a class="searchBtn" href="#!">Search</a></li>
                     <li><a href="#!">Connexion</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#!">Add</a></li>
-                    <li><a href="#!">Search</a></li>
+                    <li><a class="addBtn" href="#!">Add</a></li>
+                    <li><a class="searchBtn" href="#!">Search</a></li>
                     <li><a href="#!">Connexion</a></li>
                 </ul>
             </div>
@@ -40,16 +40,24 @@
 
         <div class="container">
             <div class="row">
-                <form class="col s12" method="post" action="">
+                <form id="add" class="col s12" method="post" action="">
                     <div class="row">
                         <h4 class="light">Ajouter :</h4>
+                        <div class="input-field col s12 m6">
+                            <input id="titleBato" name="titleBato" type="text" class="validate">
+                            <label for="titleBato">Titre</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <input id="tagBato" name="tagBato" type="text" class="validate">
+                            <label for="tagBato">Tag</label>
+                        </div>
                         <div class="input-field col s12">
-                            <input id="phrbato" name="phrbato" type="text" class="validate">
-                            <label for="phrbato">votre phrase bateau :</label>
+                            <input id="phraseBato" name="phraseBato" type="text" class="validate">
+                            <label for="phraseBato">Phrase bato</label>
                         </div>
                    </div>
                    <div class="center">
-                       <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Envoyer</a>
+                       <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Ajouter</a>
                    </div>
                 </form>
                 <?php
@@ -71,7 +79,7 @@
         <div class="parallax-container valign-wrapper">
             <div class="container">
                 <div class="row center">
-                    <h3>Phrase du mois :</h3>
+                    <h3>Phrase du moment :</h3>
                     <h5 class="header col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit am eleifend.</h5>
                 </div>
             </div>
@@ -80,16 +88,20 @@
 
         <div class="container">
             <div class="row">
-                <form class="col s12" method="post" action="">
+                <form id="search" class="col s12" method="post" action="">
                     <div class="row">
                         <h4 class="light">Rechercher :</h4>
                         <div class="input-field col s12">
-                            <input id="phrbato" name="phrbato" type="text" class="validate">
-                            <label for="phrbato">votre phrase bateau :</label>
+                            <select name="tag">
+                                <option value="1">#Rapport de stage</option>
+                                <option value="2">#Rencontre</option>
+                                <option value="3">#Work</option>
+                            </select>
+                            <label>Par tag</label>
                         </div>
                    </div>
                    <div class="center">
-                       <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Envoyer</a>
+                       <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Rechercher</a>
                    </div>
                 </form>
             </div>
@@ -123,4 +135,5 @@
     <script src="../public/js/jquery-2.2.3.min.js"></script>
     <script src="../public/js/materialize.min.js"></script>
     <script src="../public/js/init.js"></script>
+    <script src="../public/js/scrollTo.min.js"></script>
 </html>
