@@ -40,7 +40,7 @@
 
         <div class="container">
             <div class="row">
-                <form class="col s12">
+                <form class="col s12" method="post" action="">
                     <div class="row">
                         <h4 class="light">Ajouter :</h4>
                         <div class="input-field col s12">
@@ -57,7 +57,7 @@
                         echo'<div class="col s12 m6">
                                 <div class="card">
                                     <div class="card-content white-text">
-                                        <span class="card-title">Title by User - date</span>
+                                        <span class="card-title">Title #TAG by User - date</span>
                                         <p>I am a very simple card. I am good at containing small bits of information.
                                         I am convenient because I require little markup to use effectively.</p>
                                     </div>
@@ -71,11 +71,28 @@
         <div class="parallax-container valign-wrapper">
             <div class="container">
                 <div class="row center">
-                    <h3>Phrase du Mois :</h3>
+                    <h3>Phrase du mois :</h3>
                     <h5 class="header col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit am eleifend.</h5>
                 </div>
             </div>
             <div class="parallax"><img src="../public/img/wallHomeR.jpg" alt="Phrasesbato background home"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <form class="col s12" method="post" action="">
+                    <div class="row">
+                        <h4 class="light">Rechercher :</h4>
+                        <div class="input-field col s12">
+                            <input id="phrbato" name="phrbato" type="text" class="validate">
+                            <label for="phrbato">votre phrase bateau :</label>
+                        </div>
+                   </div>
+                   <div class="center">
+                       <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Envoyer</a>
+                   </div>
+                </form>
+            </div>
         </div>
 
         <footer class="page-footer">
@@ -97,7 +114,7 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    © 2014 Copyright phrasesbato.fr made with Laravel and Materializecss.
+                    © 2014 Copyright phrasesbato.fr made with Laravel and Materialize.
                     <a class="grey-text text-lighten-4 right" href="#!">Mentions légale</a>
                 </div>
             </div>
