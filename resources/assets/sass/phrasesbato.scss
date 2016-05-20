@@ -15,7 +15,6 @@ html{
                         margin-bottom: 50px;
                         .btn{
                             background-color: #0D0F0E !important;
-
                             &:hover{
                                 background-color: #117D8B!important;
                             }
@@ -30,6 +29,20 @@ html{
                         .card-content{
                             color: black!important;
                             border-radius: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        #modalCo{
+            .modal-content{
+                form{
+                    .center{
+                        .btn{
+                            background-color: #0D0F0E !important;
+                            &:hover{
+                                background-color: #117D8B!important;
+                            }
                         }
                     }
                 }

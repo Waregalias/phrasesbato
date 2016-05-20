@@ -14,12 +14,12 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="addBtn" href="#!">Add</a></li>
                     <li><a class="searchBtn" href="#!">Search</a></li>
-                    <li><a href="#!">Connexion</a></li>
+                    <li><a class="modal-trigger" href="#modalCo">Connexion</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a class="addBtn" href="#!">Add</a></li>
                     <li><a class="searchBtn" href="#!">Search</a></li>
-                    <li><a href="#!">Connexion</a></li>
+                    <li><a class="modal-trigger" href="#modalCo" >Connexion</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,30 +61,29 @@
                         </div>
                    </div>
                    <div class="center">
-                       <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Ajouter</a>
+                       <a class="waves-effect waves-light btn"><i class="material-icons left">add</i>Ajouter</a>
                    </div>
                 </form>
-                <?php
-                    for ($i=0; $i < 6 ; $i++) {
-                        echo'<div class="col s12 m6">
-                                <div class="card">
-                                    <div class="card-content white-text">
-                                        <span class="card-title">Title #TAG by User - date</span>
-                                        <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                    </div>
-                                </div>
-                            </div>';
-                    }
-                 ?>
+
+                @for ($i = 1; $i <= 6; $i++)
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content white-text">
+                                <span class="card-title">Title {{ $i }} #TAG by User - date</span>
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+                @endfor
+
             </div>
         </div>
 
         <div class="parallax-container valign-wrapper">
             <div class="container">
                 <div class="row center">
-                    <h3>Phrase du moment :</h3>
-                    <h5 class="header col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit am eleifend.</h5>
+                    <h3>Phrasesbato.fr</h3>
                 </div>
             </div>
             <div class="parallax"><img src="../public/img/wallHomeR.jpg" alt="Phrasesbato background home"></div>
@@ -105,11 +104,34 @@
                         </div>
                    </div>
                    <div class="center">
-                       <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Rechercher</a>
+                       <a class="waves-effect waves-light btn"><i class="material-icons left">search</i>Rechercher</a>
                    </div>
                 </form>
             </div>
         </div>
+
+        <!-- Modal Connexion -->
+        <div id="modalCo" class="modal">
+            <div class="modal-content">
+                <h4 class="light">Connexion :</h4>
+                <form id="connexion" class="col s12" method="post" action="">
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <input id="pseudo" name="pseudo" type="text" class="validate">
+                            <label for="pseudo">Pseudo</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <input id="mdp" name="mdp" type="password" class="validate">
+                            <label for="mdp">Password</label>
+                        </div>
+                   </div>
+                   <div class="center">
+                       <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Connexion</a>
+                   </div>
+                </form>
+            </div>
+        </div>
+        <!-- End Modal Connexion -->
 
         <footer class="page-footer">
             <div class="container">
@@ -123,7 +145,7 @@
                         <ul>
                             <li><a class="addBtn grey-text text-lighten-3" href="#!">Add</a></li>
                             <li><a class="searchBtn grey-text text-lighten-3" href="#!">Search</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Connexion</a></li>
+                            <li><a class="grey-text text-lighten-3 modal-trigger" href="#modalCo">Connexion</a></li>
                         </ul>
                     </div>
                 </div>

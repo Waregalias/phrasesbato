@@ -2,6 +2,7 @@ $( document ).ready(function(){
      $(".button-collapse").sideNav();
      $('.parallax').parallax();
      $('select').material_select();
+     $('.modal-trigger').leanModal();
 
      $('.addBtn').on('click', function(){
          scrollToSomewhere('add', 300);
