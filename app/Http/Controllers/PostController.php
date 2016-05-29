@@ -10,7 +10,7 @@ class PostController extends Controller
 {
   public function read()
   {
-      $posts = Post::all();
+      $posts = Post::where('validate', 0)->paginate(6);
 
       return view('index', compact('posts'));
   }
