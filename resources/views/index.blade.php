@@ -17,7 +17,7 @@
             </div>
         </nav>
         <div class="container">
-            <h2 class="light center">Avec phrasesbato.fr, devenez 100% génériques.</h2>
+            <h2 class="light center">Avec phrasesbato, devenez 100% génériques.</h2>
             <p class="center">Trouvez des phrases bateau pour vos dossiers, entretien ou rencontre !</p>
         </div>
         <div class="parallax-container valign-wrapper">
@@ -31,46 +31,48 @@
         </div>
         <div class="container">
             <div class="row">
-                <form id="add" class="col s12" method="post" action="">
+                <form id="add" class="col s12" method="post" action="{{ URL::to('post') }}">
                     <div class="row">
-                        <h4 class="light">Ajouter :</h4>
+                        <h4 class="light">Envoyer une phrase</h4>
                         <div class="input-field col s12 m6">
-                            <input id="titleBato" name="titleBato" type="text" class="validate">
-                            <label for="titleBato">Titre</label>
-                        </div>
-                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">subject</i>
                             <select name="tag">
-                                <option value="1">#Rapport de stage</option>
-                                <option value="2">#Rencontre</option>
-                                <option value="3">#Work</option>
+                                <option value="#Rapport">#Rapport de stage</option>
+                                <option value="#Entretien">#Entretien Pro</option>
+                                <option value="#LM">#Lettre de Motivation</option>
                             </select>
                             <label>tag</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="phraseBato" name="phraseBato" type="text" class="validate">
-                            <label for="phraseBato">Phrase bato</label>
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="phraseBato" name="phraseBato" type="text" class="materialize-textarea"></textarea>
+                            <label for="phraseBato">Texte</label>
                         </div>
                    </div>
                    <div class="center">
-                       <a class="waves-effect waves-light btn"><i class="material-icons left">add</i>Ajouter</a>
+                         <button type="submit" class="waves-effect waves-light btn">
+                         <i class="material-icons left">send</i>Envoyer
+                       </button>
                    </div>
+                   <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                 </form>
                 <ul>
-                @if (empty($posts))
-                    Aucun post n'est disponible... Veuillez réessayer ultérieurement.
-                @else
-                  @foreach ($posts as $array)
-                    <div class="col s12 m6">
-                        <div class="card">
-                            <div class="card-content white-text">
-                                <span class="card-title">{{ $array->tag }} par NULL - {{ date("F d, Y", strtotime($array->date_ajout)) }}</span>
-                                <p>{{ $array->texte }}</p>
-                            </div>
-                        </div>
-                    </div>
-                  @endforeach
-                  {!! $posts->links() !!}
-                @endif
+                  @if (empty($posts))
+                      Aucun post n'est disponible... Veuillez réessayer ultérieurement.
+                  @else
+                    @foreach ($posts as $array)
+                      <div class="col s12 m6">
+                          <div class="card">
+                              <div class="card-content white-text">
+                                  <span class="card-title">{{ $array->tag }} par NULL - {{ date("F d, Y", strtotime($array->date_ajout)) }}</span>
+                                  <p>{{ $array->texte }}</p>
+                              </div>
+                          </div>
+                      </div>
+                    @endforeach
+                    {!! $posts->links() !!}
+                  @endif
+                </ul>
             </div>
         </div>
         <div class="parallax-container valign-wrapper">
@@ -88,9 +90,9 @@
                         <h4 class="light">Rechercher :</h4>
                         <div class="input-field col s12">
                             <select name="tag">
-                                <option value="1">#Rapport de stage</option>
-                                <option value="2">#Rencontre</option>
-                                <option value="3">#Work</option>
+                                <option value="#Rapport">#Rapport de stage</option>
+                                <option value="#Entretien">#Entretien Pro</option>
+                                <option value="#LM">#Lettre de Motivation</option>
                             </select>
                             <label>Par tag</label>
                         </div>

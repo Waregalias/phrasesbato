@@ -31,15 +31,19 @@ html body .container .row .col .card .card-content {
   color: black !important;
   border-radius: 0px;
 }
-/* line 41, ../../resources/assets/sass/phrasesbato.scss */
+/* line 35, ../../resources/assets/sass/phrasesbato.scss */
+html body .container .row .pagination {
+  text-align: center;
+}
+/* line 44, ../../resources/assets/sass/phrasesbato.scss */
 html body #modalCo .modal-content form .center .btn {
   background-color: #0D0F0E !important;
 }
-/* line 43, ../../resources/assets/sass/phrasesbato.scss */
+/* line 46, ../../resources/assets/sass/phrasesbato.scss */
 html body #modalCo .modal-content form .center .btn:hover {
   background-color: #117D8B !important;
 }
-/* line 51, ../../resources/assets/sass/phrasesbato.scss */
+/* line 54, ../../resources/assets/sass/phrasesbato.scss */
 html body footer {
   background-color: #117D8B !important;
 }
