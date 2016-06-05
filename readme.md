@@ -1,3 +1,18 @@
+# Phrasesbato
+
+Sources of Phrasesbato website.
+
+- Listing posts from the DB
+- Search posts from the DB according to #TAG
+- Adding post
+  - __TODO__: link with account
+  - __TODO__: Add controls on <input> from addpost-module
+- __TODO__: Account
+
+## Link
+
+You can visit it here: [Comming Soon](http://www.voidmx.net).
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
