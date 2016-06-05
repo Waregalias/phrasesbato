@@ -14,18 +14,19 @@ class PostController extends Controller
       $posts = Post::where('validate', 1)->paginate(6);
       return view('index', compact('posts'));
   }
+  public function search(Request $search)
+  {
+      $posts = Post::where('tag', $search->tag)->paginate(6);
+      return view('search', compact('posts'));
+  }
 
   public function write(Request $request)
   {
-      //return view('index');
-      return $request->all();
+      dd($request);
+      $result = $request->all();
+      unset($result['_token']);
 
-      // $request = Post::insert($addpost);
-      // return view('index', compact('posts'));
-  }
-
-  public function search()
-  {
-      $posts_research = Post::where('tag', $value);
+      if (Post::insert($result))
+        $this->read();
   }
 }
