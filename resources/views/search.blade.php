@@ -60,7 +60,7 @@
                           <div class="card">
                               <div class="card-content white-text">
                                   <span class="card-title">{{ $array->tag }} par NULL - {{ date("F d, Y", strtotime($array->date_ajout)) }}</span>
-                                  <p>{{ $array->texte }}</p>
+                                  <p>{{ nl2br($array)->texte }}</p>
                               </div>
                           </div>
                       </div>

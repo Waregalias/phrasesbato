@@ -22,11 +22,10 @@ class PostController extends Controller
 
   public function write(Request $request)
   {
-      dd($request);
       $result = $request->all();
       unset($result['_token']);
-
-      if (Post::insert($result))
-        $this->read();
+      if (Post::insert($result)) {
+        return $this->read();
+      }
   }
 }

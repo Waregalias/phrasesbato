@@ -2,7 +2,7 @@
 @section('content')
         <nav>
             <div class=" container nav-wrapper">
-                <a href="/" class="brand-logo">PhrasesBato.fr</a>
+                <a href="" class="brand-logo">PhrasesBato.fr</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="addBtn" href="#!">Add</a></li>
