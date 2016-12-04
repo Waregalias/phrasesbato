@@ -2,6 +2,7 @@
 @section('content')
         <nav>
             <div class=" container nav-wrapper">
+                <!-- TODO: Fix error href="route('/')" -->
                 <a href="" class="brand-logo">PhrasesBato.fr</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -56,7 +57,7 @@
                        </button>
                    </div>
                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                   <input type="hidden" name"validate" value="1">
+                   {{--<input type="hidden" name="validate" value="1">--}}
                 </form>
                 <ul>
                   @if (empty($posts))
@@ -67,7 +68,7 @@
                           <div class="card">
                               <div class="card-content white-text">
                                   <span class="card-title">{{ $array->tag }} par NULL - {{ date("F d, Y", strtotime($array->date_ajout)) }}</span>
-                                  <p>{{ $array->texte }}</p>
+                                  <p>{!! nl2br($array->texte) !!}</p>
                               </div>
                           </div>
                       </div>
